@@ -1,7 +1,7 @@
 # Project Name
 
 ## <a name="introduction"></a> Introduction :
-Project Description
+Backend Parts of Story App
 
 ## Table of Contents
 
@@ -12,25 +12,24 @@ Project Description
 - [APK Link](#apk-link)
 
 ## <a name="features"></a> Features :
-You may list what feature you created, example :
 - Story List
 - Add Story
 - Story Detail
 - Edit Story
 
-
 ## <a name="libraries"></a> Libraries :
-You may list what libraries you used in this project, example :
 - ExpressJS
-- ReactJS
-- etc
+- Mongoose
+- MongoDB
+- Multer
 
 ## <a name="project-structures"></a> Project Structure :
-* `assets`
-* `components`
-* `utils`
-* `pages`
-* `services`
+* `controllers`
+* `db`
+* `models`
+* `routes`
+* `test`
+* `uploads`
 
 ## <a name="apk-link"></a> Website URL :
-Attach the link of your deployed project or youtube link here
+- API: https://stories-backend-bigio-test.vercel.app/
