@@ -8,7 +8,10 @@ const chapterSchema = new Schema({
     },
     content: {
         type: String,
-    },
+    }, isDeleted: {
+        type: Boolean,
+        default: false
+    }
 }, {
     timestamps: true
 })

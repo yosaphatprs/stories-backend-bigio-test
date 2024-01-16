@@ -29,6 +29,10 @@ const storySchema = new Schema({
     },
     chapter: {
         type: [Chapter],
+    },
+    isDeleted: {
+        type: Boolean,
+        default: false
     }
 })
 
