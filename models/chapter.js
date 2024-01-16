@@ -8,7 +8,8 @@ const chapterSchema = new Schema({
     },
     content: {
         type: String,
-    }, isDeleted: {
+    },
+    isDeleted: {
         type: Boolean,
         default: false
     }

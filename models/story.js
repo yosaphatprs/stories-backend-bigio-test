@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const Chapter = require('./chapter')
+const Chapter = require('./chapter').schema
 const Schema = mongoose.Schema
 
 const storySchema = new Schema({
@@ -19,6 +19,14 @@ const storySchema = new Schema({
         type: ['Financial', 'Technology', 'Health'],
         required: true
     },
+    coverImageName: {
+        type: String,
+        required: true
+    },
+    coverImagePath: {
+        type: String,
+        required: true
+    },
     tags: {
         type: [String],
         required: true
@@ -29,6 +37,7 @@ const storySchema = new Schema({
     },
     chapter: {
         type: [Chapter],
+        default: []
     },
     isDeleted: {
         type: Boolean,

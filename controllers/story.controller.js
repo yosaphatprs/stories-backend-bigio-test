@@ -2,7 +2,8 @@ const Story = require('../models/story')
 
 exports.createStory = async function (storyObj) {
     try {
-        if (!storyObj || !storyObj.title || !storyObj.author || !storyObj.synopsis || !storyObj.category || !storyObj.tags || !storyObj.status) {
+
+        if (!storyObj || !storyObj.title || !storyObj.author || !storyObj.synopsis || !storyObj.category || !storyObj.tags || !storyObj.filename || !storyObj.path || !storyObj.status) {
             throw new Error('Invalid arguments!');
         }
 
@@ -11,19 +12,26 @@ exports.createStory = async function (storyObj) {
             author,
             synopsis,
             category,
+            filename,
+            path,
             tags,
             status
         } = storyObj;
+
+        coverImagePath = storyObj.path;
+        coverImageName = storyObj.filename;
 
         let story = new Story({
             title,
             author,
             synopsis,
             category,
+            coverImageName,
+            coverImagePath,
             tags,
             status
         });
-
+        console.log(story)
         return await story.save();
 
     } catch (err) {

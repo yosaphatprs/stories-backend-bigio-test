@@ -16,7 +16,9 @@ exports.createChapter = async function (storyId, chapterObj) {
 
         let story = await Story.findById(storyId);
 
-        return await story.children.push(chapter);
+        await story.chapter.push(chapter);
+
+        return await story.save();
 
     } catch (err) {
         return Promise.reject(err);
