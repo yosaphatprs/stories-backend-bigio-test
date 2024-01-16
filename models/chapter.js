@@ -9,6 +9,8 @@ const chapterSchema = new Schema({
     content: {
         type: String,
     },
+}, {
+    timestamps: true
 })
 
 module.exports = mongoose.model('Chapter', chapterSchema)
