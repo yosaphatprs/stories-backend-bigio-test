@@ -1,11 +1,14 @@
-const loadEnv = require('dotenv').config();
+require('dotenv').config();
 const express = require('express')
+const cors = require('cors')
+const mongoose = require('mongoose')
+const conn = require('./db/conn.js')
 
 const PORT = process.env.PORT || 5050;
 const app = express();
 
 app.use(express.json());
-app.use(require('cors')())
+app.use(cors)
 
 // start the Express server
 app.listen(PORT, () => {
